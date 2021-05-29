@@ -1,0 +1,24 @@
+{
+  "name": "react-native-zigzag-lines",
+  "version": "0.1.0",
+  "description": "Zig-zag border for using on tickets or receipts",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mutagen-d/react-native-zigzag-lines.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "zig-zag",
+    "zigzag",
+    "borders",
+    "receipts"
+  ],
+  "author": "mutagen-d",
+  "license": "ISC",
+  "dependencies": {
+    "react-native-svg": "^12.1.1"
+  }
+}
