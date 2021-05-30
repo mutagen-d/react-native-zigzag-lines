@@ -23,7 +23,6 @@ const toString = (props) => {
 /** @type {Record<string, string>} */
 const chachedResults = {}
 
-const DEFAULT_WIDTH = 360
 const DEFAULT_HEIGHT = 10
 const DEFAULT_JAG_BOTTOM = 0
 const DEFAULT_JAG_WIDTH = 15
@@ -42,7 +41,7 @@ export const createZigzagPath = (props) => {
     return chachedResults[key]
   }
   const {
-    width = DEFAULT_WIDTH,
+    width,
     height = DEFAULT_HEIGHT,
     jagBottom: bottom = DEFAULT_JAG_BOTTOM,
     jagWidth = DEFAULT_JAG_WIDTH,
@@ -81,7 +80,7 @@ export const createZigzagPath = (props) => {
  */
 const ZigzagLines = (props) => {
   const {
-    width = DEFAULT_WIDTH,
+    width,
     height = DEFAULT_HEIGHT,
     backgroundColor = DEFAULT_BACKGROUND_COLOR,
     color = DEFAULT_COLOR,
@@ -96,10 +95,9 @@ const ZigzagLines = (props) => {
   return <Svg
     {...svgProps}
     onLayout={e => {
-      svgProps.onLayout && svgProps.onLayout(e)
+      svgProps && svgProps.onLayout && svgProps.onLayout(e)
       setLayout({ ...e.nativeEvent.layout })
     }}
-    width={width}
     height={height}
     viewBox={`0 0 ${layout.width} ${layout.height}`}
     style={[
