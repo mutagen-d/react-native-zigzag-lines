@@ -1,6 +1,6 @@
 {
   "name": "react-native-zigzag-lines",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zig-zag border for using on tickets or receipts",
   "main": "index.js",
   "types": "index.d.ts",
