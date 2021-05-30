@@ -14,7 +14,7 @@ import { View } from "react-native"
 import ZigzagLines from "react-native-zigzag-lines"
 
 const App = () => {
-  const [width, setWidth] = useState(360)
+  const [width, setWidth] = useState()
   return <View
     style={{
       flexDirection: "column",
@@ -22,21 +22,21 @@ const App = () => {
       backgroundColor: "#DEDEDE",
     }}
   >
-    <ZigzagLines
+    {typeof width == 'number' && <ZigzagLines
       width={width}
       backgroundColor="#DEDEDE"
       color="#FFF"
-    />
+    />}
     <View
       style={{ backgroundColor: "#FFF" }}
       onLayout={e => setWidth(e.nativeEvent.layout.width)}
     />
-    <ZigzagLines
+    {typeof width == 'number' && <ZigzagLines
       position="bottom"
       width={width}
       backgroundColor="#DEDEDE"
       color="#FFF"
-    />
+    />}
   </View>
 }
 ```
