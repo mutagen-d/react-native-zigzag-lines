@@ -1,6 +1,8 @@
 # react-native-zigzag-lines
 Zig-zag border for using on tickets or receipts
 
+[<IMG SRC="https://github.com/mutagen-d/react-native-zigzag-lines/raw/master/samples/receipt.png" width="400" />](#properties)
+
 ## Installation
 ```bash
 yarn add react-native-zigzag-lines
